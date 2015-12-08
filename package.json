@@ -15,7 +15,7 @@
   "scripts": {
     "webpack": "webpack --progress --colors",
     "build": "webpack -p",
-    "dev": "webpack-dev-server --progress --colors --content-base=./src/",
+    "dev": "webpack-dev-server --progress --colors --hot --inline --content-base=./src/",
     "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
