@@ -4,7 +4,7 @@ import path from 'path';
 
 const config = () => {
 
-  let buildFile = info.buildFile.split('/');
+  let buildFile = info.buildFile.split('/');  // build/bundle.js
 
   const
     OUTPUT_FILE = buildFile.pop(),
@@ -12,12 +12,13 @@ const config = () => {
 
   return {
     entry: {
-      main: `./${info.main}`,
+      main: `./${info.main}`,  // src/main.js
     },
     output: {
-      path: path.resolve(__dirname, OUTPUT_FOLDER),
-      publicPath: info.staticURL,
-      filename: OUTPUT_FILE,
+      path: path.resolve(__dirname, OUTPUT_FOLDER),  // /build/
+      publicPath: info.staticURL,  // /build/
+      filename: OUTPUT_FILE,  // bundle.js
+      libraryTarget: 'umd',
     },
     module: {
       loaders: [
