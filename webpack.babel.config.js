@@ -16,7 +16,7 @@ const config = () => {
     },
     output: {
       path: path.resolve(__dirname, OUTPUT_FOLDER),  // /build/
-      publicPath: info.staticURL,  // /build/
+      publicPath: info.staticURL,  // /assets/
       filename: OUTPUT_FILE,  // bundle.js
       libraryTarget: 'umd',
     },
