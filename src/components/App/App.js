@@ -10,7 +10,7 @@ export default class App extends React.Component {
   static propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
-  }
+  };
 
   render() {
 
