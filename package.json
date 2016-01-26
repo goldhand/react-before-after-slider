@@ -1,5 +1,5 @@
 {
-  "name": "webpack-hzskeleton",
+  "name": "react-before-after-slider",
   "version": "1.0.0",
   "description": "some common stuff",
   "main": "src/main.js",
@@ -17,15 +17,11 @@
     "build": "npm run webpack",
     "dev": "./node_modules/.bin/webpack-dev-server --progress --colors --hot --inline --content-base=./src/",
     "start": "npm run dev",
-    "test": "./node_modules/.bin/mocha --compilers js:babel-core/register src/**/__tests__/**/*test*.js",
-    "deploydev": "npm run build && ./bin/deploy.sh -d",
-    "undodeploydev": "./bin/deploy.sh -d -u",
-    "mkcomponent": "./bin/mkComponent.sh",
-    "mkcomponentredux": "./bin/mkComponent.sh -t redux"
+    "test": "./node_modules/.bin/mocha --compilers js:babel-core/register src/**/__tests__/**/*test*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:goldhand/webpack-hzskeleton.git"
+    "url": "git@github.com:goldhand/react-before-after-slider.git"
   },
   "author": "Will Farley",
   "license": "ISC",
