@@ -1,3 +1,12 @@
+/*
+ * Before-After Slider
+ * Display before and after images in one space of one image.
+ * When the user hovers over the image, the image is divided at that point
+ * Move the cursor to the right to see the after image
+ * Move the cursor to the left to see the before image
+ * The parent element should define some width for this component, flexbox works well
+ */
+
 import React from 'react';
 
 
@@ -8,7 +17,7 @@ export default class BeforeAfterSlider extends React.Component {
   static propTypes = {
     beforeSrc: PropTypes.string.isRequired,
     afterSrc: PropTypes.string.isRequired,
-    styles: PropTypes.object,
+    styles: PropTypes.object,  // any additional styles to be passed into the container
   };
 
   constructor(props) {
@@ -33,9 +42,9 @@ export default class BeforeAfterSlider extends React.Component {
 
   calcWidth = (e) => {
     return (
-      (e.clientX -
-      this.container.offsetLeft) /
-      this.container.clientWidth) * 100;
+      (e.clientX -                        // cursor x axis
+      this.container.offsetLeft) /        // how far left on the page is this element
+      this.container.clientWidth) * 100;  // total width of the element
   };
 
   styles = () => {
